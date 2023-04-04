@@ -1,6 +1,5 @@
 from setuptools import setup
-import os
-reqs = open(os.path.join('zscaller','requirements.txt')).read().split('\n')
+reqs = open('requirements.txt').read().split('\n')
 setup(
     name="zscaller",
     version="1.0",
