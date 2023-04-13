@@ -48,7 +48,7 @@ def url_categories():
         
     return render_template(
         "main.html"
-        ,message='Choose file of URLs to lookup. The file MUST contain a column of URLs with header name "url".'
+        ,message='Choose file of URLs to lookup.'
         )
 
 
