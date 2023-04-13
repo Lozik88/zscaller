@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Zscaller</title>
+	<h1>URL Lookup</h1>
+    <h3>File Requirements:</h3>
+    <ul>
+        <li>File must be in .csv for .xlsx format.</li>
+        <li>File must contain a column with urls to lookup.</li>
+        <li>URL column MUST have heading with name: <i>url</i>.</li>
+    </ul>
+</head>
+<body>
+	<form method = "POST" enctype="multipart/form-data" action = "/">
+		<input type="file" name="file" accept=".csv, .xlsx, .xls">
+		<input type = "submit" value="Parse" id="submitParse" disabled>
+		<!-- <input type="button" value="Browse..." onclick="document.getElementById('selectedFile').click();" /> -->
+	</form>
+	<p style="color:blue;">{{ message }}</p>
+</body>
+<!-- <script src="{{ url_for('static', filename='enable.js') }}"></script> -->
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(
+    function(){
+        $('input:file').change(
+            function(){
+                if ($(this).val()) {
+                    $('input:submit').attr('disabled',false); 
+                } 
+            }
+            );
+    });
+</script>
+</html>
