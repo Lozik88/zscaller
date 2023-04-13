@@ -7,7 +7,13 @@
 		"context": "..",
 		// Update the 'dockerFile' property if you aren't using the standard 'Dockerfile' filename.
 		"dockerfile": "../Dockerfile"
+	},
+	"containerEnv": {
+		"ZSCALER_API_KEY": "${localEnv:ZSCALER_API_KEY}",
+		"ZSCALER_USR": "${localEnv:ZSCALER_USR}",
+		"ZSCALER_PW": "${localEnv:ZSCALER_PW}"
 	}
+	
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
