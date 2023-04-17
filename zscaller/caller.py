@@ -4,13 +4,6 @@ import os
 import logging
 import sys
 
-# you might want to set these as environment variables
-# you can use os.environ['YOUR_ENV_VARIABLE'] to retrieve the variable value. 
-# if you do, just make sure you import os
-# if using linux style OS, these can be added to the $HOME/.profile or $HOME/.bashrc file 
-z_api_key=''
-z_usr=''
-z_pw=''
 has_env = all(
     [
     'ZSCALER_API_KEY' in os.environ
