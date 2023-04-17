@@ -40,3 +40,15 @@ result = z.url_lookup(domains)
 print(result.json())
 ```
 
+## Web App - Docker Install
+Build the docker image:
+```sh
+./build_image.sh
+```
+
+Run in container:
+```sh
+./run_container.sh
+```
+
+Running the container will make the URL lookup avialble via [localhost](http://localhost:5000/).
